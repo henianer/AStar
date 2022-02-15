@@ -120,8 +120,10 @@ export default class AStarTest extends cc.Component {
 
                         if (this.startCoo.x > -1 && this.startCoo.y > -1 && this.endCoo.x > -1 && this.endCoo.y > -1 && !this.isPathfinding) {
                             this.btnPathfinding.node.active = true;
+                            this.toggleDirection.node.active = true;
                         } else {
                             this.btnPathfinding.node.active = false;
+                            this.toggleDirection.node.active = false;
                         }
 
                         break;
@@ -134,6 +136,7 @@ export default class AStarTest extends cc.Component {
     private async onclickPathfinding() {
         this.isPathfinding = true;
         this.btnPathfinding.node.active = false;
+        this.toggleDirection.node.active = false;
         this.list = AStarManager.getInstance(AStarManager).pathfinding(this.startCoo, this.endCoo, this.is8Direction);
         if (this.list.length === 0) {
             this.isPathfinding = false;

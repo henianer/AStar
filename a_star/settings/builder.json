@@ -1,5 +1,5 @@
 {
-  "title": "AStar",
+  "title": "a_star",
   "packageName": "org.cocos2d.demo",
   "startScene": "a963cd72-517a-425d-8f47-0ede0fe5ae27",
   "excludeScenes": [],
